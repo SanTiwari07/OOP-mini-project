@@ -3,10 +3,10 @@
 # 🎮 C++ Mini Casino Game (Console-Based)
 This code implements a console-based mini-casino game in C++ that includes four games:
 
-  1.Number Guesser
-  2.Minesweeper-inspired Game
-  3.Play Point (Dice Sum Prediction)
-  4.Coin Flip
+  1.Number Guesser  
+  2.Minesweeper-inspired Game   
+  3.Play Point (Dice Sum Prediction)  
+  4.Coin Flip  
 
 All games are derived from a common base class user which handles user name input and point entry. The global points variable starts with 1000 points and is modified based on game performance.
 
