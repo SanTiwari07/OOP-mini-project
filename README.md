@@ -52,6 +52,6 @@ Uses random_device and mt19937 seeded with current time for randomness.
 Dice and mine placements are generated with uniform_int_distribution.  
 
 # Highlights
-Demonstrates use of OOP in C++ (Inheritance, Encapsulation).
-Implements input validation and basic game logic.
-Great project for beginners to practice control flow, loops, and randomness in C++.
+Demonstrates use of OOP in C++ (Inheritance, Encapsulation).  
+Implements input validation and basic game logic.  
+Great project for beginners to practice control flow, loops, and randomness in C++.  
