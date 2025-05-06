@@ -1,5 +1,5 @@
 # OOP-mini-project
-_____________________________________________________________________________________________________________________________________________________________________________________________________________________
+
 # 🎮 C++ Mini Casino Game (Console-Based)
 This code implements a console-based mini-casino game in C++ that includes four games:
 
@@ -11,7 +11,7 @@ This code implements a console-based mini-casino game in C++ that includes four 
 All games are derived from a common base class user which handles user name input and point entry. The global points variable starts with 1000 points and is modified based on game performance.
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
 # Structure & Flow
-_____________________________________________________________________________________________________________________________________________________________________________________________________________________
+
 # 1. Base Class - user
 Handles user's name and betting points.
 Validates whether the entered bet is within available points.
