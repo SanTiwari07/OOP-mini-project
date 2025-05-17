@@ -1,6 +1,6 @@
 # OOP-mini-project
 
-# 🎮 C++ Mini Casino Game (Console-Based)
+# 🎮 C++ Mini Game (Console-Based)
 This code implements a console-based mini-casino game in C++ that includes four games:
 
   1.Number Guesser  
