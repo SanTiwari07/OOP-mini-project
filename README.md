@@ -121,8 +121,8 @@ Pull requests are welcome! If you'd like to improve or add new features to the g
 
 Made with 💻 and ❤️ by -
 
-## Sanskar Tiwari
+**Sanskar Tiwari**
 
-## Saai Khamkar
+**Saai Khamkar**
 
-## Siddhant Patil
+**Siddhant Patil**
