@@ -54,6 +54,7 @@ Build and run the project.
 
 # 📸 Demo
 
+
 ========= Welcome to the Number Game Suite =========
 Choose a game:
 0. Exit
