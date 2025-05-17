@@ -2,7 +2,7 @@
 
 A C++ console-based mini game suite that features three exciting games based on numbers and logic. This project is ideal for beginners who are learning C++ fundamentals, especially in file handling, random number generation, and control structures.
 
-🧠 About the Project
+# 🧠 About the Project
 
 This mini-project contains a collection of three simple yet entertaining games:
 
@@ -18,7 +18,7 @@ User guesses either heads or tails (1 or 2), a random result determines win/loss
 
 
 
-🛠️ Features
+# 🛠️ Features
 
 🎲 4 fun mini-games in one program
 
@@ -32,14 +32,8 @@ User guesses either heads or tails (1 or 2), a random result determines win/loss
 
 🧰 Modular code structure with reusable functions
 
-📂 File Structure
 
-📁 Number-Based-Mini-Games/
-🔼— main.cpp            # Main source file containing all game logic
-🔼— score.txt           # File to store the user's score
-🔼— README.md           # Project documentation
-
-🚀 How to Run the Project
+# 🚀 How to Run the Project
 
 🔧 Prerequisites
 
@@ -47,7 +41,7 @@ A C++ compiler (like g++, clang, or any IDE like Code::Blocks / Visual Studio / 
 
 Basic understanding of how to compile and run C++ programs
 
-🧾 Compile and Run (Using Command Line)
+# 🧾 Compile and Run (Using Command Line)
 
 g++ main.cpp -o game
 ./game
@@ -58,7 +52,7 @@ Open the main.cpp file.
 
 Build and run the project.
 
-📸 Demo
+# 📸 Demo
 
 ========= Welcome to the Number Game Suite =========
 Choose a game:
@@ -69,7 +63,7 @@ Choose a game:
 4. coin filp
 Enter your choice: _
 
-🧑‍💻 Concepts Used
+# 🧑‍💻 Concepts Used
 
 This project demonstrates the following C++ concepts:
 
@@ -89,7 +83,7 @@ Random number generation (rand(), srand())
 
 Header inclusion and modular coding
 
-📈 Score System
+# 📈 Score System
 
 Your score is stored in a file (score.txt) and updates after each game session:
 
@@ -99,7 +93,7 @@ Your score is stored in a file (score.txt) and updates after each game session:
 
 🎲 Play Point: +10 for correct dice sum, -5 for wrong guess
 
-📌 Future Improvements
+# 📌 Future Improvements
 
 Add difficulty levels
 
@@ -111,11 +105,11 @@ Add leaderboard feature
 
 Store date and time of each game session
 
-🤝 Contributing
+# 🤝 Contributing
 
 Pull requests are welcome! If you'd like to improve or add new features to the game suite, feel free to fork the repo and submit your suggestions.
 
- ✍️ Author
+ # ✍️ Author
 
 Made with 💻 and ❤️ by -
 
@@ -123,4 +117,4 @@ Sanskar Tiwari
 
 Saai Khamkar
 
- Siddhant Patil
+Siddhant Patil
