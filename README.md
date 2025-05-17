@@ -1,57 +1,126 @@
-# OOP-mini-project
+🎮 Number-Based Mini Game Suite in C++
 
-# 🎮 C++ Mini Game (Console-Based)
-This code implements a console-based mini-casino game in C++ that includes four games:
+A C++ console-based mini game suite that features three exciting games based on numbers and logic. This project is ideal for beginners who are learning C++ fundamentals, especially in file handling, random number generation, and control structures.
 
-  1.Number Guesser  
-  2.Minesweeper-inspired Game   
-  3.Play Point (Dice Sum Prediction)  
-  4.Coin Flip  
+🧠 About the Project
 
-All games are derived from a common base class user which handles user name input and point entry. The global points variable starts with 1000 points and is modified based on game performance.
+This mini-project contains a collection of three simple yet entertaining games:
 
-# Structure & Flow
+Number GuesserThe system generates a random number between 1 and 100. The player has 8 attempts to guess the number. After each guess, the program gives a hint whether the number is too high or too low.
 
-# 1. Base Class - user
--Handles user's name and betting points.  
--Validates whether the entered bet is within available points.  
+Minesweeper 4x4A simplified version of the Minesweeper game on a 4x4 grid. Players choose coordinates to reveal. If they hit a mine, the game ends. The game uses arrays and randomness to place mines.
 
-# 2. Game 1: number_guesser
--Inherits from user.
--User has 8 attempts to guess a random number between 0 and 100.  
-The fewer the attempts, the higher the multiplier:  
+Play Point (Dice Game)Simulates rolling two dice. The player guesses the total sum before the roll. Correct guesses earn points, incorrect guesses lose points. A simple game of luck and probability!
 
-1st try = 10x   
-2nd try = 8x  
-...  
-8th try = 1x  
-Fail = 0x  
+coin_filp
 
-# 3. Game 2: minesweeper_4x4
--Simulates a 4x4 grid with 5 random mine positions.  
--User must avoid the mines by selecting safe grid cells.  
--Each safe selection increases earnings by 1.75x per step.  
--Entering 0 0 exits the game with an additional 10 points.  
+User guesses either heads or tails (1 or 2), a random result determines win/loss and Matching guess wins the bet amount; wrong guess loses it.
 
-# 4. Game 3: play_point
--A dice game with 3 rolls.  
--User predicts the total sum (range 3 to 18).  
-Rewards:
 
-Exact match = 5x  
-±1 = 2x  
-±2 = no gain/loss  
-Others = -2x loss  
 
-# 5. Game 4: coin_filp
--User guesses either heads or tails (1 or 2).  
--A random result determines win/loss.  
--Matching guess wins the bet amount; wrong guess loses it.  
--Random Number Generation  
--Uses random_device and mt19937 seeded with current time for randomness.  
--Dice and mine placements are generated with uniform_int_distribution.  
+🛠️ Features
 
-# Highlights
--Demonstrates use of OOP in C++ (Inheritance, Encapsulation).  
--Implements input validation and basic game logic.  
--Great project for beginners to practice control flow, loops, and randomness in C++.  
+🎲 4 fun mini-games in one program
+
+📂 Score saving using file handling (score.txt) and player's story (data_player.txt)
+
+🫮 Random number generation using rand()
+
+🛡️ Input validation and basic error handling
+
+📋 Clean and readable menu system
+
+🧰 Modular code structure with reusable functions
+
+📂 File Structure
+
+📁 Number-Based-Mini-Games/
+🔼— main.cpp            # Main source file containing all game logic
+🔼— score.txt           # File to store the user's score
+🔼— README.md           # Project documentation
+
+🚀 How to Run the Project
+
+🔧 Prerequisites
+
+A C++ compiler (like g++, clang, or any IDE like Code::Blocks / Visual Studio / Dev C++)
+
+Basic understanding of how to compile and run C++ programs
+
+🧾 Compile and Run (Using Command Line)
+
+g++ main.cpp -o game
+./game
+
+💡 Or, if using an IDE:
+
+Open the main.cpp file.
+
+Build and run the project.
+
+📸 Demo
+
+========= Welcome to the Number Game Suite =========
+Choose a game:
+0. Exit
+1. Number Guesser
+2. Minesweeper 4x4
+3. Play Point (Dice Game)
+4. coin filp
+Enter your choice: _
+
+🧑‍💻 Concepts Used
+
+This project demonstrates the following C++ concepts:
+
+Input/output (cin, cout)
+
+Conditional statements (if, else)
+
+Loops (for, while)
+
+Arrays
+
+Functions
+
+File handling (ofstream, ifstream)
+
+Random number generation (rand(), srand())
+
+Header inclusion and modular coding
+
+📈 Score System
+
+Your score is stored in a file (score.txt) and updates after each game session:
+
+🎯 Number Guesser: +10 points for correct guess
+
+💣 Minesweeper: +5 points for each safe coordinate
+
+🎲 Play Point: +10 for correct dice sum, -5 for wrong guess
+
+📌 Future Improvements
+
+Add difficulty levels
+
+Use classes and object-oriented programming
+
+Implement colored UI using platform-specific libraries
+
+Add leaderboard feature
+
+Store date and time of each game session
+
+🤝 Contributing
+
+Pull requests are welcome! If you'd like to improve or add new features to the game suite, feel free to fork the repo and submit your suggestions.
+
+ ✍️ Author
+
+Made with 💻 and ❤️ by -
+
+Sanskar Tiwari
+
+Saai Khamkar
+
+ Siddhant Patil
