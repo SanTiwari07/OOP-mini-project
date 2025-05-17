@@ -6,19 +6,19 @@ A C++ console-based mini game suite that features three exciting games based on 
 
 This mini-project contains a collection of three simple yet entertaining games:
 
-Number Guesser  
+## Number Guesser  
 
 The system generates a random number between 1 and 100. The player has 8 attempts to guess the number. After each guess, the program gives a hint whether the number is too high or too low.
 
-Minesweeper 4x4A simplified version of the Minesweeper game on a 4x4 grid.  
+## Minesweeper 4x4A simplified version of the Minesweeper game on a 4x4 grid.  
 
 Players choose coordinates to reveal. If they hit a mine, the game ends. The game uses arrays and randomness to place mines.
 
-Play Point (Dice Game)  
+## Play Point (Dice Game)  
 
 Simulates rolling two dice. The player guesses the total sum before the roll. Correct guesses earn points, incorrect guesses lose points. A simple game of luck and probability!
 
-coin_filp  
+## coin_filp  
 
 User guesses either heads or tails (1 or 2), a random result determines win/loss and Matching guess wins the bet amount; wrong guess loses it.
 
