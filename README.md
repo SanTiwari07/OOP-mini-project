@@ -1,4 +1,4 @@
-**🎮 Number-Based Mini Game Suite in C++**
+# 🎮 Number-Based Mini Game Suite in C++
 
 A C++ console-based mini game suite that features three exciting games based on numbers and logic. This project is ideal for beginners who are learning C++ fundamentals, especially in file handling, random number generation, and control structures.
 
