@@ -117,12 +117,12 @@ Store date and time of each game session
 
 Pull requests are welcome! If you'd like to improve or add new features to the game suite, feel free to fork the repo and submit your suggestions.
 
- # ✍️ Author
+# ✍️ Author
 
 Made with 💻 and ❤️ by -
 
-Sanskar Tiwari
+## Sanskar Tiwari
 
-Saai Khamkar
+## Saai Khamkar
 
-Siddhant Patil
+## Siddhant Patil
