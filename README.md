@@ -55,7 +55,7 @@ Build and run the project.
 # 📸 Demo
 
 ========= Welcome to the Number Game Suite =========    
-Choose a game:  
+Choose a game: 
 0. Exit
 1. Number Guesser
 2. Minesweeper 4x4
