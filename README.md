@@ -18,7 +18,7 @@ Players choose coordinates to reveal. If they hit a mine, the game ends. The gam
 
 Simulates rolling two dice. The player guesses the total sum before the roll. Correct guesses earn points, incorrect guesses lose points. A simple game of luck and probability!
 
-### coin_filp  
+### Coin Filp  
 
 User guesses either heads or tails (1 or 2), a random result determines win/loss and Matching guess wins the bet amount; wrong guess loses it.
 
