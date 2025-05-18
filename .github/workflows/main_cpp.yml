@@ -20,5 +20,5 @@ jobs:
     - name: Compile OOP_Code_version_4.cpp
       run: g++ OOP_Code_version_4.cpp -o program
 
-    - name: Run the program
-      run: ./program
+    - name: Run the program with input
+      run: echo -e "Rohan\n2" | ./program
