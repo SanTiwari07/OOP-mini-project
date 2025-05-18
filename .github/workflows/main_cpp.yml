@@ -21,4 +21,4 @@ jobs:
       run: g++ OOP_Code_version_4.cpp -o program
 
     - name: Run the program with input
-      run: echo -e "Rohan\n2" | ./program
+      run: echo -e "Vivek\n2\n0\n0\n4\n25\n1\n3\n10\n12\n0" | ./program
