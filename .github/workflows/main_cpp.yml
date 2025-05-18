@@ -1,0 +1,24 @@
+name: Run OOP_Code_version_4.cpp
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Install g++
+      run: sudo apt-get update && sudo apt-get install -y g++
+
+    - name: Compile OOP_Code_version_4.cpp
+      run: g++ OOP_Code_version_4.cpp -o program
+
+    - name: Run the program
+      run: ./program
