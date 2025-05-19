@@ -515,7 +515,7 @@ public:
 };
 // coin filp game
 // Inherited from user class
-class coin_filp : public user
+class coin_flip : public user
 {
 private:
     int num;
@@ -589,7 +589,7 @@ int main()
     do
     {
         cout << endl
-             << "Welcome To GAME World, where you can play-\n0 - To exit\n1 - Number Guesser\n2 - minesweeper\n3 - play point\n4 - coin filp\n";
+             << "Welcome To GAME World, where you can play-\n0 - To exit\n1 - Number Guesser\n2 - minesweeper\n3 - play point\n4 - coin flip\n";
         do
         {
             cout
@@ -621,7 +621,7 @@ int main()
         {
             if (option == 4)
             {
-                coin_filp c1;
+                coin_flip c1;
                 c1.rules_coin();
                 c1.enter_value();
                 c1.coin_input();
