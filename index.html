@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game World</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #121212;
+      color: white;
+    }
+
+    header {
+      background-color: #1f1f1f;
+      padding: 20px;
+      text-align: center;
+      font-size: 2em;
+      color: #FFD700;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+    }
+
+    .game-option {
+      background: #2a2a2a;
+      margin: 10px;
+      padding: 20px;
+      border-radius: 12px;
+      width: 80%;
+      max-width: 600px;
+      transition: transform 0.3s;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+    }
+
+    .game-option:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+    }
+
+    .game-option h2 {
+      margin-top: 0;
+      color: #FFD700;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #888;
+    }
+
+    button {
+      background: #FFD700;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #e6c200;
+    }
+  </style>
+</head>
+
+<body>
+  <header>GAME WORLD</header>
+  <main>
+    <div class="game-option" onclick="numberGuesser()">
+      <h2>Number Guesser</h2>
+      <p>Guess the number between 0 and 100 in 8 tries. Points are based on how quickly you guess.</p>
+    </div>
+    <div class="game-option" onclick="minesweeper()">
+      <h2>Minesweeper Inspired</h2>
+      <p>A 4x4 grid. Avoid upto 5 mines. You can exit early for bonus points!</p>
+    </div>
+    <div class="game-option" onclick="playPointDice()">
+      <h2>Play Point (Dice)</h2>
+      <p>Guess the sum of 3 dice rolls. Points depend on your accuracy!</p>
+    </div>
+    <div class="game-option" onclick="coinFlip()">
+      <h2>Coin Flip</h2>
+      <p>Choose heads or tails and test your luck!</p>
+    </div>
+    <button onclick="resetPoints()">Reset Points</button>
+    <h3 style="margin-top: 20px;">Your Points: <span id="pointCounter">1000</span></h3>
+  </main>
+  <footer>Created by Sanskar and Team | All rights reserved.</footer>
+
+  <script>
+    let points = 1000;
+    let value_enter = 0;
+
+    function updatePoints() {
+      document.getElementById("pointCounter").textContent = points;
+    }
+
+    function resetPoints() {
+      points = 1000;
+      updatePoints();
+      alert("Points reset to 1000!");
+    }
+
+    function getBet() {
+      let value;
+      do {
+        value = parseInt(prompt(`Enter points to play (you have ${points}):`));
+        if (isNaN(value) || value < 1 || value > points) {
+          alert("Invalid entry. Try again.");
+          value = null;
+        }
+      } while (value === null);
+      return value;
+    }
+
+    function numberGuesser() {
+      value_enter = getBet();
+      const random = Math.floor(Math.random() * 101);
+      let counter = 1;
+      for (let i = 1; i <= 8; i++) {
+        let guess = parseInt(prompt(`Turn ${i}: Guess the number (0-100):`));
+        if (guess === random) {
+          alert("You won!");
+          break;
+        } else if (guess < random) {
+          alert("Try higher.");
+          counter++;
+        } else if (guess > random) {
+          alert("Try lower.");
+          counter++;
+        }
+      }
+
+      const multiplier = [0, 10, 8, 6, 4, 3, 2, 1, 0];
+      const gain = multiplier[counter] * value_enter;
+      points += gain;
+      alert(`You earned ${gain} points. Total: ${points}`);
+      updatePoints();
+    }
+
+    function minesweeper() {
+      value_enter = getBet();
+      const gridSize = 4;
+      const grid = Array.from({ length: gridSize }, () => Array(gridSize).fill(' '));
+      const visited = Array.from({ length: gridSize }, () => Array(gridSize).fill(false));
+      const mines = new Set();
+      let safeCount = 0;
+      let step_counter = false;
+
+      while (mines.size < 5) {
+        let x = Math.floor(Math.random() * 4);
+        let y = Math.floor(Math.random() * 4);
+        mines.add(`${x},${y}`);
+      }
+
+      function displayGrid() {
+        let output = '';
+        for (let i = 0; i < gridSize; i++) {
+          for (let j = 0; j < gridSize; j++) {
+            output += `| ${grid[i][j]} `;
+          }
+          output += '|\n';
+        }
+        alert(output);
+      }
+
+      while (!step_counter) {
+        displayGrid();
+        let input = prompt("Enter coordinates (row col from 1-4) or 0 0 to exit:");
+        if (!input) return;
+        let [r, c] = input.split(" ").map(Number);
+        if (r === 0 && c === 0) {
+          points += 10;
+          alert("Exited. Gained 10 points.");
+          break;
+        }
+        r--; c--;
+
+        if (r < 0 || r >= 4 || c < 0 || c >= 4) {
+          alert("Invalid coordinates.");
+          continue;
+        }
+
+        if (visited[r][c]) {
+          alert("You have already used this coordinate.");
+          continue;
+        }
+
+        visited[r][c] = true;
+
+        if (mines.has(`${r},${c}`)) {
+          grid[r][c] = 'x';
+          alert("BOOM! You hit a mine!");
+          step_counter = true;
+          break;
+        } else {
+          grid[r][c] = 'R';
+          safeCount++;
+          alert("Safe!");
+        }
+      }
+
+      let earned = Math.floor(1.75 * safeCount);
+      points += earned;
+      alert(`You earned ${earned} points. Total: ${points}`);
+      updatePoints();
+    }
+
+    function playPointDice() {
+      value_enter = getBet();
+      let guess = parseInt(prompt("Guess the sum of 3 dice (3 to 18):"));
+      if (isNaN(guess) || guess < 3 || guess > 18) {
+        alert("Invalid guess");
+        return;
+      }
+
+      const rolls = [0, 0, 0];
+      let sum = 0;
+      for (let i = 0; i < 3; i++) {
+        rolls[i] = Math.floor(Math.random() * 6) + 1;
+        sum += rolls[i];
+      }
+      alert(`Dice: ${rolls.join(", ")} | Sum: ${sum}`);
+
+      let diff = Math.abs(sum - guess);
+      if (diff === 0) {
+        points += 5 * value_enter;
+        alert("You won 5x points");
+      } else if (diff === 1) {
+        points += 2 * value_enter;
+        alert("You won 2x points");
+      } else if (diff === 2) {
+        alert("No points won or lost");
+      } else {
+        points -= 2 * value_enter;
+        alert("You lost 2x points");
+      }
+      updatePoints();
+    }
+
+    function coinFlip() {
+      value_enter = getBet();
+      let choice = prompt("Choose:\n1 for Heads\n2 for Tails");
+      if (choice !== "1" && choice !== "2") return alert("Invalid input");
+      const result = Math.floor(Math.random() * 2) + 1;
+      alert(result === 1 ? "It's Heads" : "It's Tails");
+      if (parseInt(choice) === result) {
+        points += 2 * value_enter;
+        alert("You WON!");
+      } else {
+        points -= value_enter;
+        alert("You LOST!");
+      }
+      updatePoints();
+    }
+  </script>
+</body>
+
+</html>
